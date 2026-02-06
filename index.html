@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test | Pro Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-brand">⚡ TypeMaster</div>
+    <div class="nav-links">
+        <a href="#" class="nav-link" id="nav-home">🏠 Home</a>
+        <a href="#" class="nav-link" id="nav-about">ℹ️ About</a>
+        <a href="https://github.com/RumiInayat" target="_blank" class="nav-link">💻GitHub</a>
+    </div>
+    <button class="theme-toggle" id="theme-toggle">
+        <span class="theme-icon">🌙</span>
+    </button>
+</nav>
+
+<div class="welcome-screen" id="welcome-screen">
+    <div class="welcome-content">
+        <h1 class="welcome-title">⚡ TypeMaster</h1>
+        <p class="welcome-subtitle">Test your typing speed and accuracy</p>
+        <div class="welcome-features">
+            <div class="feature">⏱️ 60 Second Test</div>
+            <div class="feature">📊 Real-time Stats</div>
+            <div class="feature">🔥 Streak Tracking</div>
+        </div>
+        <button class="welcome-btn" id="start-welcome">Start Typing Test</button>
+    </div>
+</div>
+
+<div class="container" id="main-app" style="display: none;">
+    <h1>Typing Speed Test</h1>
+
+    <div class="stats-container">
+        <div class="stat-box">
+            <span class="stat-value" id="timer">60</span>
+            <span class="stat-label">Time Left</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value" id="wpm">0</span>
+            <span class="stat-label">WPM</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value" id="accuracy">100%</span>
+            <span class="stat-label">Accuracy</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value" id="errors">0</span>
+            <span class="stat-label">Errors</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-value" id="combo">0</span>
+            <span class="stat-label">Streak</span>
+        </div>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress"></div>
+    </div>
+
+    <div id="text-display"></div>
+    
+    <div class="controls">
+        <button id="start-btn" class="btn-start">Start Test</button>
+        <button id="restart-btn" class="btn-restart">Restart</button>
+    </div>
+</div>
+
+<div class="modal" id="result-modal">
+    <div class="modal-content">
+        <h2>🎉 Test Complete!</h2>
+        <div class="modal-stats">
+            <div class="modal-stat">
+                <span>Speed:</span>
+                <strong id="modal-wpm">0 WPM</strong>
+            </div>
+            <div class="modal-stat">
+                <span>Accuracy:</span>
+                <strong id="modal-accuracy">0%</strong>
+            </div>
+            <div class="modal-stat">
+                <span>Max Streak:</span>
+                <strong id="modal-streak">0</strong>
+            </div>
+            <div class="modal-stat">
+                <span>Errors:</span>
+                <strong id="modal-errors">0</strong>
+            </div>
+        </div>
+        <button class="modal-btn" onclick="closeModal()">Try Again</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
