@@ -91,14 +91,20 @@
             padding: 0.5rem 1rem;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 1.2rem;
             transition: all 0.2s;
             box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .theme-toggle:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        .theme-icon {
+            display: block;
         }
 
         /* Welcome Screen */
